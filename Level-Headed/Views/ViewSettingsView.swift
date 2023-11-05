@@ -8,10 +8,20 @@
 import SwiftUI
 
 struct ViewSettingsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+	var body: some View {
+		List {
+			// Placeholder for future settings
+			Text("Placeholder")
+		}
+		.navigationBarTitle("Views")
+		.listStyle(GroupedListStyle())
+		.navigationBarItems(trailing: Button("Update") {
+			// Logic to update Firestore fields
+		})
+
+	}
 }
+
 
 #Preview {
     ViewSettingsView()

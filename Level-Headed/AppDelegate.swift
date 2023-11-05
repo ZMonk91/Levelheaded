@@ -2,7 +2,13 @@
 //  AppDelegate.swift
 //  Level-Headed
 //
-//  Created by Zachary Monk on 11/1/23.
+// Description: AppDelegate for handling app lifecycle events.
 //
+import SwiftUI
 
-import Foundation
+class AppDelegate: NSObject, UIApplicationDelegate {
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+		User.shared.syncWithFirestore()
+		return true
+	}
+}
